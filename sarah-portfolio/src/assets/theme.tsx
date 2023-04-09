@@ -1,19 +1,4 @@
 import { createTheme } from '@mui/material/styles'
-import { orange } from '@mui/material/colors'
-
-declare module '@mui/material/styles' {
-  interface Theme {
-    status: {
-      danger: string
-    }
-  }
-  // allow configuration using `createTheme`
-  interface ThemeOptions {
-    status?: {
-      danger?: string
-    }
-  }
-}
 
 const colors = {
   grey: {
@@ -73,7 +58,7 @@ const colors = {
   }
 }
 
-const theme = createTheme({
+const theme : ThemeOptions = {
   palette: {
     mode: 'dark',
     primary: {
@@ -114,6 +99,6 @@ const theme = createTheme({
       fontSize: 14
     }
   }
-})
+}
 
-export default theme
+export default createTheme(theme)
