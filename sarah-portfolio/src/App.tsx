@@ -17,6 +17,18 @@ import { PortfolioCard } from './assets/components/PortfolioCard'
 function App() {
   return (
     <>
+      <ul className='circles'>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
       <AppBar component='nav' sx={{ bgcolor: '#0b0d39' }}>
         <Toolbar sx={{ justifyContent: 'flex-end' }}>
           <IconButton href='https://github.com/sarahabing' target='_blank'>
@@ -50,7 +62,7 @@ function App() {
 
         {/* Main Content */}
         <Box component='main'>
-          <Grid className="cardSection" container spacing={3} mt={3}>
+          <Grid className='cardSection' container spacing={3} mt={3}>
             <Grid item xs={12} sm={4}>
               <PortfolioCard title={'Education'} />
             </Grid>
