@@ -39,7 +39,7 @@ function App() {
           </IconButton>
         </Toolbar>
       </AppBar>
-      <Container className='mainContent' maxWidth='sm'>
+      <Container>
         <Grid container className='statusBar' spacing={3}>
           <Grid item>
             <Avatar
@@ -63,13 +63,10 @@ function App() {
         {/* Main Content */}
         <Box component='main'>
           <Grid className='cardSection' container spacing={3} mt={3}>
-            <Grid item xs={12} sm={4}>
+            <Grid item xs={12} sm={6}>
               <PortfolioCard title={'Education'} />
             </Grid>
-            <Grid item xs={12} sm={4}>
-              <PortfolioCard title={'Experience'} />
-            </Grid>
-            <Grid item xs={12} sm={4}>
+            <Grid item xs={12} sm={6}>
               <PortfolioCard title={'Experience'} />
             </Grid>
           </Grid>

@@ -4,25 +4,28 @@ interface PortfolioCardProps {
   title: string
 }
 
-
 export function PortfolioCard(props: PortfolioCardProps): JSX.Element {
   return (
-    <Card variant='outlined' sx={{ bgcolor: 'transparent' }}>
+    <Card variant='outlined' sx={{ bgcolor: 'transparent', width: '100%' }}>
       <CardContent>
-        <Typography sx={{ fontSize: 14 }} color='text.secondary' gutterBottom>
+        <Typography variant='h3' color='text.secondary' gutterBottom>
           {props.title}
         </Typography>
-        <Typography variant='h5' component='div'>
-          be-nev-o-lent
-        </Typography>
-        <Typography sx={{ mb: 1.5 }} color='text.secondary'>
-          adjective
-        </Typography>
-        <Typography variant='body2'>
-          well meaning and kindly.
-          <br />
-          {'"a benevolent smile"'}
-        </Typography>
+        {(() => {
+          switch (props.title) {
+            case 'Education':
+              return (
+                <>
+                  <Typography variant='h5'>Southern Utah University</Typography>
+                  <Typography variant='button'>Master's Degree in Cybersecurity</Typography>
+                </>
+              )
+            case 'Experience':
+              return <Typography>work</Typography>
+            default:
+              return <Typography>uh</Typography>
+          }
+        })()}
       </CardContent>
     </Card>
   )
